@@ -33,13 +33,13 @@ if __name__ == "__main__":
     # Get the list of jpg files
     jpg_files = set()
     for filename in os.listdir(jpg_directory):
-        if filename.endswith('.JPG'):
+        if filename.lower().endswith('.jpg'):
             jpg_files.add(filename.split('.')[0])
 
     # Get the list of raw files
     raw_files = set()
     for filename in os.listdir(raw_directory):
-        if filename.endswith('.ARW'):
+        if filename.lower().endswith('.arw'):
             raw_files.add(filename.split('.')[0])
 
     # Find raw files without corresponding jpg files
